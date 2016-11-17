@@ -1,3 +1,10 @@
+'''
+Author: Aleksandr Spiridonov
+This is a quick example of an app that will be modified for
+mirroring to an HDMI driven screen with interactive UI on
+a Raspberry Pi touchscreen.
+'''
+
 import os
 
 os.environ["KIVY_BCM_DISPMANX_ID"] = "4"
@@ -20,7 +27,7 @@ class ButtonDIPO(Button):
         self.IPO_value = IPO_value
 
     def on_press(self):
-        self.dictionary[self.key_string]=self.IPO(self.dictionary[self.key_string],self.IPO_value)
+        self.dictionary[self.key_string] = self.IPO(self.dictionary[self.key_string],self.IPO_value)
 
 class LabelD(Label):
     def __init__(self,dictionary,key_string,**kwargs):
